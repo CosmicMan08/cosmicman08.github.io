@@ -1,6 +1,6 @@
 <html>
 
-<body style="background-image:url('pa6v03g1glo91.gif'); background-repeat:repeat;">
+<body style="background-image:url('pa6v03g1glo91.gif'); background-repeat:repeat; background-size: 30%;">
 <h1>SPAMT</h1>
 </body>
   
