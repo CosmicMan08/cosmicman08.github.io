@@ -4,7 +4,7 @@ permalink: /SPAMT
 
 <html>
 
-<body style="background-image:url("https://cdn.discordapp.com/emojis/1021114750492491896.gif?size=96&quality=lossless"); background-repeat:repeat;">
+<body style="background-image:url('pa6v03g1glo91.gif'); background-repeat:repeat;">
 <h1>SPAMT</h1>
 </body>
   
