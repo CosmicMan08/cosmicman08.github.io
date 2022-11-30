@@ -1,4 +1,4 @@
-<h1 color: #e0005b>cosmic's epic web site !!!!</h1>
+<h1 {color: #e0005b}>cosmic's epic web site !!!!</h1>
 
 <p>hi my name is cosmic and im a catgirl who LOVES sprigatito :3</p>
 
