@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>meowowmeowmememe meowowmeowmemeow</title>
+    <style>
+        body {
+            background-color: rgba(0, 5, 20, 255);
+            display: block;
+        }
+
+        textarea {
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            resize: none;
+            width: 30%;
+        }
+
+        h1 {
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            resize: none;
+        }
+
+        button {
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            width: 30.6%;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>"Translator" for the Tasque enemy dialogue from Deltarune.</h1>
+    </div>
+    <div>
+        <button id="run" style="float:right; left: 5%; width: 48%;" onclick="decode()"><b><i>decode</i></b></button>
+    </div>
+    <button id="run" style="float:left; right: 5%; width: 48%;" onclick="encode()"><b><i>encode</i></b></button>
+    </div>
+    <textarea style="float:right; height: 300px; width: 48%; resize:none;"
+        id="output">meowmemeowmememe meowowmemeowmeow meowowmeowowmeme meowowmeowowmeme meowowmeowowowow memeowmeowowmeme memeowmememememe meowowowmeowowow meowowmeowowowow meowowowmemeowme meowowmeowowmeme meowowmemeowmeme memeowmemememeow</textarea>
+    </div>
+    <div>
+        <textarea style="float:left; height: 300px;width: 48%; resize:none;" id="input">Hello, World!</textarea>
+        <div>
+            <script>
+                function encode(program, debug) {
+                    input = document.getElementById("input").value
+                    output = document.getElementById("output")
+                    output.value = "";
+                    for (var i = 0; i < input.length; i++) {
+                        output.value += (0b100000000 + input[i].charCodeAt(0)).toString(2).substring(1) + " "
+                    }
+                    output.value = output.value.replaceAll("0", "me").replaceAll("1", "ow")
+                }
+                function decode(program, debug) {
+                    output = document.getElementById("output").value.replaceAll("me", "0").replaceAll("ow", "1")
+                    input = document.getElementById("input")
+                    input.value = String.fromCharCode(...output.split(' ').map(bin => parseInt(bin, 2)))
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
