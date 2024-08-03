@@ -1,0 +1,10 @@
+div {
+  background-color: rgba(256, 256, 256, 0.75);
+  width: 40%;
+  padding: 20px;
+  margin: auto;
+}
+body {
+    background-image:url('galaxy.png');
+    background-repeat:repeat;
+}
