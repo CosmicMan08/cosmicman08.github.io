@@ -8,3 +8,6 @@ body {
     background-image:url('galaxy.png');
     background-repeat:repeat;
 }
+p {
+    font-family:'Mona'
+}
