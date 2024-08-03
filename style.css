@@ -8,6 +8,12 @@ body {
     background-image:url('galaxy.png');
     background-repeat:repeat;
 }
-p {
-    font-family:'Mona'
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    div {
+        width: 90%;
+        padding: 20px;
+    }
 }
