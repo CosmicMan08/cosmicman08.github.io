@@ -1,19 +1,134 @@
-div {
-  background-color: rgba(256, 256, 256, 0.75);
-  width: 40%;
-  padding: 20px;
-  margin: auto;
+div:not(.container) {
+  /*background-color: rgba(256, 256, 256, 0.75);*/
+  padding: 1vw;
+  margin: 2vw 1vw;
+  max-width: 100vw;
 }
 body {
-    background-image:url('galaxy.png');
-    background-repeat:repeat;
+    background-image: url('galaxy.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
+
+    animation-duration: 20s;
+    animation-name: sliding-bg;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes sliding-bg {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 1152px 648px;
+    }
 }
 
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-    div {
-        width: 90%;
-        padding: 20px;
+* {
+    font-size: 1.75vh;
+}
+
+h1 {
+    font-size: 4vh;
+}
+
+h2 {
+    font-size: 3vh;
+}
+
+.hoverscale {
+    transform-origin: bottom left;
+
+    transition: scale 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+    scale: 105%;
+}
+.hoverscale:hover {
+    scale: 115%;
+}
+
+h1, h2 {
+    mix-blend-mode: unset;
+    filter: drop-shadow(-1px 1px 0px #0000FF) drop-shadow(1px -1px 0px #FF0000);
+}
+
+* {
+    font-family:'Comic Sans MS','Comic Sans','ChalkboardSE-Regular','Rebus Script',sans-serif;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+.row {
+    flex-direction: row;
+}
+.column {
+    flex-direction: column;
+}
+
+.container > div {
+    flex-shrink: 2;
+    width:fit-content(20000em);
+    max-width: 100vw;
+}
+
+.hologram {
+    filter: drop-shadow(-5px 5px 0px #0000FF) drop-shadow(5px -5px 0px #FF0000);
+
+    border: solid 80px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-image: url("assets/galaxy/div-hologram.gif");
+    border-image-slice: 80 fill;
+    border-image-repeat: round;
+
+    /*background-color: rgba(0, 256, 256, 0.75);*/
+    mix-blend-mode: screen;
+}
+
+.paper {
+    position: relative;
+    background-image: url("assets/galaxy/paper bg.png");
+
+    border: solid 50px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-image: url("assets/galaxy/hands border.png");
+    border-image-slice: 50;
+    border-image-repeat: round;
+    border-image-outset: 0px 35px;
+}
+
+
+
+.floating {
+    animation-duration: 20s;
+    animation-name: floating;
+    animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+    0% {
+        translate: 0px, 30px;
+        rotate: 2deg
+    }
+    33% {
+        translate: 30px, -30px;
+    }
+    50% {
+        rotate: -2deg;
+    }
+    66% {
+        translate: -30px, 0px;
+    }
+    100% {
+        translate: 0px, 30px;
+        rotate: 2deg
     }
 }
