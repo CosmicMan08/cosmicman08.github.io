@@ -112,23 +112,77 @@ h1, h2 {
     animation-name: floating;
     animation-iteration-count: infinite;
 }
-
 @keyframes floating {
     0% {
-        translate: 0px, 30px;
         rotate: 2deg
-    }
-    33% {
-        translate: 30px, -30px;
     }
     50% {
         rotate: -2deg;
     }
-    66% {
-        translate: -30px, 0px;
-    }
     100% {
-        translate: 0px, 30px;
         rotate: 2deg
     }
+}
+
+.cosmic-move {
+    animation-duration: 5s;
+    animation-name: cosmic-movement;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.cosmic-reverse {
+    position: relative;
+    animation-duration: 4s;
+    animation-name: cosmic-movement;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes cosmic-movement {
+    0% {
+        translate: 0px 0px;
+        rotate: -2deg
+    }
+    100% {
+        translate: 0px 20px;
+        rotate: 2deg
+    }
+}
+
+.cosmic-arm {
+    pointer-events: none;
+}
+
+.held-social {
+    scale: 500%;
+    position:absolute; 
+    z-index: 2;
+    translate: -200px 115px;
+}
+div>.container:has(.held-social)::after {
+    content: '';
+    background-image: url("assets/one-offs/main/navigation/right hand.png");
+    width: 85px;
+    height: 85px;
+    z-index: 3;
+    position:absolute; 
+    pointer-events: none;
+    translate: -217px 135px;
+}
+
+.held-button {
+    scale: -250% 250%;
+    position:absolute; 
+    z-index: 2;
+    translate: -200px 115px;
+}
+div>.container:has(.held-button)::after {
+    content: '';
+    background-image: url("assets/one-offs/main/navigation/left hand.png");
+    width: 102px;
+    height: 69px;
+    z-index: 3;
+    scale: -100% 100%;
+    position:absolute; 
+    pointer-events: none;
+    translate: -217px 145px;
 }
