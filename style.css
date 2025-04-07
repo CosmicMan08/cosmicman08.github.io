@@ -9,7 +9,7 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
 
-    animation-duration: 20s;
+    animation-duration: 50s;
     animation-name: sliding-bg;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
